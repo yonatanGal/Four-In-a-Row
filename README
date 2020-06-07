@@ -1,0 +1,195 @@
+Yonatan Gal
+204292999
+Gil Grimberg
+204293781
+
+list of contacts students:
+noam chen
+
+
+=============================
+=  README for ex12:  =
+=============================
+
+==================
+=  Description:  =
+==================
+
+class Disc:
+    this class represents a disc type attributes.
+    it contains getters and setters methods.
+
+class Board:
+    this class represents a Board type attributes.
+    it initiates a board and has information regarding discs that are on it.
+
+    get_player_at(self,row,col):
+        returns the player's name at the (row, col) coordinate
+
+    get_discs_list(self):
+         returns the discs list
+
+    update_board(self, x_location, y_location, color):
+        set a disc (color) in the board
+
+    __str__(self):
+        This function is called when a board object is to be printed.
+        it returns a A string of the current status of the board.
+
+    add_disc(self, disc, column):
+        adds a disc to the board.
+
+    possible_moves(self):
+        returns a list of all possible moves.
+
+    is_legal(self, column):
+        checks if it's legal to insert a disc to in a given column.
+
+    cell_content(self, coordinate):
+        returns the disc a given location.
+
+class Player:
+    this class represents a player type object.
+    it initiates a player, sets its name,mode,turn and color.
+    it contains getters and setters.
+
+
+class Ai:
+    this class represents an AI object.
+    responsible for the moves of the computer.
+
+    contains the function:
+
+    1. find_legal_move(self) - finds a legal move for the AI.
+
+    2. check_tie(self) - checks if the game board is full.
+
+class Game:
+    this class represents a game type object.
+    it initiates a game board and players objects and contains the method that
+    computes the gameplay.
+    it contains getters and setters methods.
+
+    single_play(self, column):
+        does one play in the game, if possible. else, raise an exception.
+
+    change_turns(self):
+        sets the current turn of the players.
+
+    make_move(self, column):
+        makes one move in the game, else, raise an exception.
+
+    get_winner(self):
+        this function checks if the game ended by victory, or a tie.
+        :return: the winning color, tie, or None if the game hasn't ended yet.
+
+    get_player_at(self, row, col):
+        returns the player at the given coordinate, or None if there is nobody
+        there.
+
+    get_current_player(self):
+        returns the player's name which has the turn
+
+    get_current_player_object(self):
+        returns the player object which has the turn
+
+
+class Gui:
+    this class represent a gui type object.
+    it initiates a gui and sets the labels, canvases and buttons.
+    it contains getters and setters.
+
+    init_packs(self):
+        packs the title, main canvas, and the buttons.
+
+    init_buttons(self):
+        creates the buttons of the intro screen
+
+    init_canvases(self):
+        creates the main canvas and the board canvas and their
+         functionality.
+
+    init_labels(self):
+        creates the title, turn manager canvas, and a message. also creates
+        players titles.
+
+    return_chosen(self):
+        handles the return button.
+
+    cpu_start_chosen(self):
+        handles the cpu_start button and creates an AI object
+        accordingly.
+
+     you_start_chosen(self):
+        handles the you_start button and creates an AI object
+        accordingly.
+
+    auto_mode_chosen(self):
+        handles the auto_mode_chosen button and creates the AI objects
+        accordingly.
+
+    one_player_chosen(self):
+        handles the situation when one_player button.
+
+    on_enter_player(self, event):
+        change the you_start button text in order to describe the mode.
+
+    on_leave_player(self, event):
+        change back the you_start button text.
+
+    on_enter_cpu(self, event):
+        change the you_start button text in order to describe the mode.
+
+    on_leave_cpu(self, event):
+        change back the you_start button text.
+
+    two_players_chosen(self):
+        handles the situation when one_player button.
+
+    prepare_board(self):
+        packs the board into the root.
+
+    click_and_play(self, event):
+        connects between the game and the gui objects. gets a click
+        from the user and runs the game accordingly. or, if the user is ai,
+        runs the game with a column received from the ai.
+
+    mark_discs(self):
+        marks the winning discs.
+
+    popup_msg(self, msg):
+        changes the msg displays on the screen.
+
+    make_move_in_gui(self, i, j, color):
+        makes a move on the board of the gui object, change its display.
+
+    create_ovals(self):
+        creates the ovals which we can see on the board.
+
+    create_board(self):
+        creates a matrix representing the board from the ovals.
+
+    turn_display(self):
+        determines whose player turn it is and displays it on the screen.
+
+    winning_display(self):
+        determines which msg to display when somebody wins.
+
+    motion(self, event):
+        responsible for the arrow which shows the user in which column
+        he's at.
+
+    translate_event_to_col(self,event):
+        receives a mouse click, and translate it to a column in the game.
+
+
+==================
+=Special Comments:=
+==================
+
+Dear checker!
+we want you to know that in the picture that you see in the beginning -
+it's us!
+we hope that it made you laugh.
+the pictures of player 1 and player 2 are also us - and those pictures
+are from PURIM 2010! we went to the same class in high school :O
